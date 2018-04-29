@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_main"
+        android:adjustViewBounds="true"
+        android:background="@color/colorPrimary"/>
+
+
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:fillViewport="true"
+        android:layout_below="@+id/logo"
+        >
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".MainActivity"
+            android:paddingTop="10dp"
+            android:background="@color/colorPrimary">
+
+
+
+            <Button
+                android:id="@+id/about"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/bg_btn"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:text="ABOUT US"
+                android:onClick="about"/>
+
+            <Button
+                android:id="@+id/donate"
+                app:layout_constraintTop_toBottomOf="@+id/about"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/bg_btn"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:text="DONATE NOW"
+                android:onClick="donateNow"
+                />
+
+            <Button
+                android:id="@+id/causes"
+                app:layout_constraintTop_toBottomOf="@+id/donate"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/bg_btn"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:text="CAUSES"
+                android:onClick="causes"/>
+
+            <Button
+                android:id="@+id/help"
+                app:layout_constraintTop_toBottomOf="@+id/causes"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/bg_btn"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:text="SHOP N HELP"
+                android:onClick="help"/>
+
+            <Button
+                android:id="@+id/contact"
+                app:layout_constraintTop_toBottomOf="@+id/help"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/bg_btn"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:text="CONTACT US"
+                android:onClick="contact"/>
+
+            <Button
+                android:id="@+id/scanQr"
+                app:layout_constraintTop_toBottomOf="@+id/contact"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/bg_btn"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:text="SCAN QR CODE"
+                android:onClick="scanQr"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
